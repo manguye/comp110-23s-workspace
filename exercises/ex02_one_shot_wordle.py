@@ -1,4 +1,4 @@
-"""EX02 - One shot world homework program."""
+"""EX02 - One shot wordle homework program."""
 
 __author__ = "730411646"
 
