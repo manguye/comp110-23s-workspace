@@ -5,4 +5,8 @@ __author__ = "730411646"
 secret_word: str("python")
 guess: str = input("What is your 6-letter guess? ")
 while len(guess) != 6:
-    print("That was not 6 letters! Try again: " + guess)
+    guess: str = input("That was not 6 letters! Try again: ")
+    if (guess == secret_word):
+        print("Woo! You got it!")
+    else:
+        print("Not quite! Play again soon!")
