@@ -18,15 +18,15 @@ if len(guess) == len(secret_word):
         if guess[idx] == secret_word[idx]:
             character_checker = character_checker + GREEN_BOX
         else:
-            right_letter_wrong_place: bool = False
-            right_letter_wrong_place_idx: int = 0
-            while not right_letter_wrong_place and right_letter_wrong_place_idx < len(secret_word):
-                if guess[idx] == secret_word[right_letter_wrong_place_idx]:
-                    right_letter_wrong_place = True
+            right_character_wrong_place: bool = False
+            right_character_wrong_place_idx: int = 0
+            while not right_character_wrong_place and right_character_wrong_place_idx < len(secret_word):
+                if guess[idx] == secret_word[right_character_wrong_place_idx]:
+                    right_character_wrong_place = True
                     character_checker = character_checker + YELLOW_BOX
                 else:
-                    right_letter_wrong_place_idx = right_letter_wrong_place_idx + 1
-            if right_letter_wrong_place:
+                    right_character_wrong_place_idx = right_character_wrong_place_idx + 1
+            if right_character_wrong_place:
                 character_checker = character_checker + YELLOW_BOX
             else:
                 character_checker = character_checker + WHITE_BOX
