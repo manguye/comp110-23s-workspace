@@ -23,7 +23,6 @@ if len(guess) == len(secret_word):
             while not right_character_wrong_place and right_character_wrong_place_idx < len(secret_word):
                 if guess[idx] == secret_word[right_character_wrong_place_idx]:
                     right_character_wrong_place = True
-                    character_checker = character_checker + YELLOW_BOX
                 else:
                     right_character_wrong_place_idx = right_character_wrong_place_idx + 1
             if right_character_wrong_place:
