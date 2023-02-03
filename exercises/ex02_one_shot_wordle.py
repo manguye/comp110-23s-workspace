@@ -12,7 +12,7 @@ character_checker: str = ""
 wordle_guess: str = input(f"What is your {len(secret_word)}-letter guess? ")
 
 while len(wordle_guess) != len(secret_word):
-    wordle_guess: str = input(f"That was not {len(secret_word)} letters! Try again: ")
+    wordle_guess = input(f"That was not {len(secret_word)} letters! Try again: ")
 if len(wordle_guess) == len(secret_word):
     while idx < len(secret_word):
         if wordle_guess[idx] == secret_word[idx]:
