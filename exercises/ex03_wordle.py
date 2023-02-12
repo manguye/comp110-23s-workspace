@@ -21,7 +21,7 @@ def contains_char(secret_word: str, character_check: str) -> bool:
 
 def emojified(guess_word: str, secret_word: str) -> str:
     """Displays reponse regarding correctness of guess word."""
-    assert len(guess_word) == len (secret_word)
+    assert len(guess_word) == len(secret_word)
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
@@ -31,7 +31,7 @@ def emojified(guess_word: str, secret_word: str) -> str:
         if guess_word[idx] == secret_word[idx]:
             response = response + GREEN_BOX
         else:
-            character_checker: bool = contains_char(secret_word,guess_word[idx])
+            character_checker: bool = contains_char(secret_word, guess_word[idx])
             if character_checker:
                 response = response + YELLOW_BOX
             else:
@@ -56,7 +56,7 @@ def main() -> None:
     while not game_won and turn_counter < 7:
         print(f"=== {turn_counter}/6 ===")
         guess_word: str = input_guess(len(secret_word))
-        print(emojified(guess_word,secret_word))
+        print(emojified(guess_word, secret_word))
         if guess_word == secret_word:
             game_won = True
             print(f"You won in {turn_counter}/6 turns!")
