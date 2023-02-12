@@ -16,3 +16,23 @@ def contains_char(secret_word: str, character_check: str) -> bool:
         return True
     else:
         return False
+
+def emojified(guess_word: str, secret_word: str) -> str:
+    """Displays reponse regarding correctness of guess word."""
+    assert len(guess_word) == len (secret_word)
+    WHITE_BOX: str = "\U00002B1C"
+    GREEN_BOX: str = "\U0001F7E9"
+    YELLOW_BOX: str = "\U0001F7E8"
+    response: str = ""
+    idx: int = 0
+    while idx < len(secret_word):
+        if guess_word[idx] == secret_word[idx]:
+            response = response + GREEN_BOX
+        else:
+            character_checker: bool = contains_char(secret_word,guess_word[idx])
+            if character_checker:
+                response = response + YELLOW_BOX
+            else:
+                response = response + WHITE_BOX
+        idx = idx + 1
+    return response
