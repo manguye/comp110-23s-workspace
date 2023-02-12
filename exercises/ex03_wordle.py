@@ -59,10 +59,11 @@ def main() -> None:
         print(emojified(guess_word, secret_word))
         if guess_word == secret_word:
             game_won = True
-            print(f"You won in {turn_counter}/6 turns!")
         else:
             turn_counter = turn_counter + 1
-    if not game_won:
+    if game_won:
+        print(f"You won in {turn_counter}/6 turns!")
+    else:
         print("X/6 - Sorry, try again tomorrow!")
 
 
