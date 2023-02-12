@@ -36,3 +36,10 @@ def emojified(guess_word: str, secret_word: str) -> str:
                 response = response + WHITE_BOX
         idx = idx + 1
     return response
+
+def input_guess(word_length: int) -> str:
+    """Checks to see if a given guess is the required length."""
+    input_word: str = input(f"Enter a {word_length} character word: ")
+    while len(input_word) != word_length:
+        input_word = input(f"That wasn't {word_length} chars! Try again: ")
+    return input_word
