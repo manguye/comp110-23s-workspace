@@ -54,7 +54,7 @@ def main() -> None:
     turn_counter: int = 1
     game_won: bool = False
     while not game_won and turn_counter < 7:
-        print(f"=== {turn_counter}/6 ===")
+        print(f"=== Turn {turn_counter}/6 ===")
         guess_word: str = input_guess(len(secret_word))
         print(emojified(guess_word, secret_word))
         if guess_word == secret_word:
