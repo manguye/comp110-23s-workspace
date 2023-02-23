@@ -1,5 +1,6 @@
 """Recreating utility functions for better understanding."""
 
+
 def all(xs: list[int], x: int) -> bool:
     """Given a list of integers and an integer, checks if they are all the same."""
     if len(xs) == 0:
@@ -13,6 +14,7 @@ def all(xs: list[int], x: int) -> bool:
 
 
 def max(input: list[int]) -> int:
+    """Determines the greatest integer from a list of integers."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     i: int = 0
