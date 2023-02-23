@@ -1,6 +1,8 @@
 def all(xs: list[int], x: int) -> bool:
     """Given a list of integers and an integer, checks if they are all the same."""
     i: int = 0
+    if len(xs) == 0:
+        return False
     while i <= len(xs) - 1:
         if xs[i] != x:
             return False
