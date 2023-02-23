@@ -1,4 +1,4 @@
-"Recreating utility functions for better understanding."
+"""Recreating utility functions for better understanding."""
 
 def all(xs: list[int], x: int) -> bool:
     """Given a list of integers and an integer, checks if they are all the same."""
