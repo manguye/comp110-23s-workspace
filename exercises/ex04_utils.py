@@ -19,3 +19,12 @@ def max(input: list[int]) -> int:
             x = input[i]
         i += 1
     return x
+
+def is_equal(xs: list[int], ys: list[int]) -> bool:
+    """Checks to see if two lists are exactly the same at every index."""
+    i: int = 0
+    while i < len(xs) or i < len(ys):
+        if xs[i] != ys[i]:
+            return False
+        i += 1
+    return True
