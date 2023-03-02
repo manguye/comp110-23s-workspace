@@ -20,3 +20,18 @@ def concat(xs: list[int], ys: list[int]) -> list[int]:
     for number in ys:
         zs.append(number)
     return zs
+
+
+def sub(xs: list[int], x: int, y: int) -> list[int]:
+    """Given a list, a start index, and an end index, creates list between the specified start and end indices."""
+    ys: list[int] = list()
+    if x < 0:
+        x = 0
+    if y > len(xs):
+        y = len(xs) - 1
+    if len(xs) == 0 or x >= len(xs) or y <= 0:
+        return ys
+    for i in range(x, y):
+        if i != x or y:
+            ys.append(xs[i])
+    return ys
