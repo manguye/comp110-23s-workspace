@@ -30,7 +30,7 @@ def sub(xs: list[int], x: int, y: int) -> list[int]:
     if x < 0:
         x = 0
     if y > len(xs):
-        y = len(xs) - 1
+        y = len(xs)
     for i in range(x, y):
         if i != y:
             ys.append(xs[i])

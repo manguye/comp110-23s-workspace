@@ -69,4 +69,4 @@ def test_sub_over() -> None:
     test_list: list[int] = [1, 2, 3, 5, 8, 13, 21]
     x: int = 0
     y: int = 10
-    assert sub(test_list, x, y) == [1, 2, 3, 5, 8, 13]
+    assert sub(test_list, x, y) == [1, 2, 3, 5, 8, 13, 21]
