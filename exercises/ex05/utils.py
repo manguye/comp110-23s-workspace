@@ -32,6 +32,6 @@ def sub(xs: list[int], x: int, y: int) -> list[int]:
     if y > len(xs):
         y = len(xs) - 1
     for i in range(x, y):
-        if i != x or y:
+        if i != y:
             ys.append(xs[i])
     return ys
