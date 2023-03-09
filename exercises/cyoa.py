@@ -4,11 +4,17 @@ __author__ = "730411646"
 
 
 points: int = 0
-player: str = input("What is your name? ")
+player: str = ""
 
 def main() -> None:
-    "The beginning."
+    """The beginning."""
     global points
+
+def greet() -> None:
+    """Welcome message."""
+    global player
+    print("Context.")
+    player = input("What is your name? ")
 
 if __name__ == "__main__":
     main()
