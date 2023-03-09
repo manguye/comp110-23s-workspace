@@ -12,7 +12,3 @@ def zip(xs: list[str], ys: list[int]) -> dict[str, int]:
         zs[xs[i]] = ys[i]
         i += 1
     return zs
-
-test_list_a: list[str] = ["apple", "bananas", "cherries"]
-test_list_b: list[int] = [5, 3, 7]
-print(zip[test_list_a, test_list_b])
