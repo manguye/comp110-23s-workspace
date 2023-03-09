@@ -9,6 +9,7 @@ player: str = ""
 def main() -> None:
     """The beginning."""
     global points
+    greet()
 
 def greet() -> None:
     """Welcome message."""
