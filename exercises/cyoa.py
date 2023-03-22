@@ -28,12 +28,16 @@ def main() -> None:
             points += randint(1,10)
             print(f"Thanks to adding {conventional_toppings[ct_idx]}, your review score is now {points}! ")
             player_choice = input(f"Would you like to add another 'conventional' topping, something 'unusual', or 'present' your pizza, Chef {player}? ")
+            while player_choice != "present" and player_choice != "conventional" and player_choice != "unusual":
+                player_choice = input("That wasn't one of the available options! Pick again from 'conventional', 'unusual', or 'present'! ")
         if player_choice == "unusual":
             unusual_topping: str = input (f"What do you plan on adding, Chef {player}? ")
             unusuality: int = unusual_topping_function(len(unusual_topping), points)
             points += unusuality
             print(f"Thanks to adding {unusual_topping}, your review score is now {points}! ")
             player_choice = input(f"Chef {player}, would you like to add anything else 'unusual', add something 'conventional', or 'present' your pizza? ")
+            while player_choice != "present" and player_choice != "conventional" and player_choice != "unusual":
+                player_choice = input("That wasn't one of the available options! Pick again from 'conventional', 'unusual', or 'present'! ")
     print(f"Your pizza got a review score of {points}!")
     if points > 1000:
         print(f"Congratulations, Chef {player}! The judges loved your pizza and gave you first place! {GREAT_SCORE}")
