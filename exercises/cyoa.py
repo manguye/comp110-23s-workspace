@@ -5,6 +5,10 @@ __author__ = "730411646"
 from random import randint
 points: int = 0
 player: str = ""
+BAD_SCORE: str = "\U0001F62D"
+OKAY_SCORE: str = "\U0001F928"
+GOOD_SCORE: str = "\U0001F642"
+GREAT_SCORE: str = "\U0001F929"
 
 def main() -> None:
     """The beginning."""
@@ -31,6 +35,15 @@ def main() -> None:
             print(f"Thanks to adding {unusual_topping}, your review score is now {points}! ")
             player_choice = input(f"Chef {player}, would you like to add anything else 'unusual', add something 'conventional', or 'present' your pizza? ")
     print(f"Your pizza got a review score of {points}!")
+    if points > 1000:
+        print(f"Congratulations, Chef {player}! The judges loved your pizza and gave you first place! {GREAT_SCORE}")
+    elif points > 500:
+        print(f"Well done, Chef {player}! Although you weren't able to take first place, you still did well in the competition! {GOOD_SCORE}")
+    elif points > 100:
+        print(f"Not bad, Chef {player}. You could've done better, but you weren't the worst; better luck next time! {OKAY_SCORE}")
+    else:
+        print(f"Chef {player}, you had to be trying to get a score this low! {BAD_SCORE}")
+    
 
 def greet() -> None:
     """Welcome message."""
