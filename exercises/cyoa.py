@@ -2,6 +2,7 @@
 
 __author__ = "730411646"
 
+
 from random import randint
 points: int = 0
 player: str = ""
@@ -9,6 +10,7 @@ BAD_SCORE: str = "\U0001F62D"
 OKAY_SCORE: str = "\U0001F928"
 GOOD_SCORE: str = "\U0001F642"
 GREAT_SCORE: str = "\U0001F929"
+
 
 def main() -> None:
     """The beginning."""
@@ -55,6 +57,7 @@ def greet() -> None:
     print("Pizzamaking is no easy feat, but you're here to wow the crowd with your exceptional ideas. You've come to an international pizzamaking competition to make a combination that'll impress the judges. Get as high a review score as you can and aim for first place!")
     player = input("What is your name, chef? ")
 
+
 def unusual_topping_function(x: int, y: int) -> int:
     """Given a custom topping, awards or detracts randomly calculated score based on if the points value is even or odd."""
     if y % 2 == 0:
@@ -63,6 +66,7 @@ def unusual_topping_function(x: int, y: int) -> int:
     else:
         x = x * randint(-10, -1)
         return x
+
 
 if __name__ == "__main__":
     main()
