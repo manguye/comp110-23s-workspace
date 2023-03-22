@@ -27,13 +27,13 @@ def main() -> None:
                 ct_idx = int(input(f"Which of the following toppings would you like to add, Chef {player}? Input their index value! {conventional_toppings} "))
                 while ct_idx < 0 or ct_idx > 10:
                     ct_idx = int(input("That's not an index value of one of the conventional toppings! Pick again! "))
-            points += randint(1,10)
+            points += randint(1, 10)
             print(f"Thanks to adding {conventional_toppings[ct_idx]}, your review score is now {points}! ")
             player_choice = input(f"Would you like to add another 'conventional' topping, something 'unusual', or 'present' your pizza, Chef {player}? ")
             while player_choice != "present" and player_choice != "conventional" and player_choice != "unusual":
                 player_choice = input("That wasn't one of the available options! Pick again from 'conventional', 'unusual', or 'present'! ")
         if player_choice == "unusual":
-            unusual_topping: str = input (f"What do you plan on adding, Chef {player}? ")
+            unusual_topping: str = input(f"What do you plan on adding, Chef {player}? ")
             unusuality: int = unusual_topping_function(len(unusual_topping), points)
             points += unusuality
             print(f"Thanks to adding {unusual_topping}, your review score is now {points}! ")
