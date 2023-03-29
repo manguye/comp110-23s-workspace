@@ -18,6 +18,13 @@ def test_multiple_pairs_invert() -> None:
     assert invert(test_dict) == {"z": "a", "y": "b", "x": "c"}
 
 
+def test_keyerror_invert() -> None:
+    """Tests invert if result leads to a keyerror."""
+    with pytest.raises(KeyError):
+        my_dictionary = {"kris": "jordan", "michael": "jordan"}
+        invert(my_dictionary)
+
+
 def test_one_color_favorite_color() -> None:
     """Tests favorite_color if input is a dictionary with the same values."""
     test_dict: dict[str, str] = {"Adam": "green", "Bart": "green", "Charles": "green"}

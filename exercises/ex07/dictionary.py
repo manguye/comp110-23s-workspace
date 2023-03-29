@@ -7,6 +7,8 @@ def invert(original_dict: dict[str, str]) -> dict[str, str]:
     """Given a dictionary input, should return a dictionary that inverts the keys and values."""
     inverse_dict: dict[str, str] = {}
     for item in original_dict:
+        if original_dict[item] in inverse_dict:
+            raise KeyError(f"invert({original_dict}) has repeated values")
         inverse_dict[original_dict[item]] = item
     return inverse_dict
 
