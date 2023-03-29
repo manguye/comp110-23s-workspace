@@ -25,5 +25,12 @@ def favorite_color(color_inputs: dict[str, str]) -> str:
 
 print(favorite_color({"Marc": "yellow", "Ezri": "blue", "Kris": "blue"}))
 
-def count(xs: list[str]) -> dict[str, int]:
+def count(item_list: list[str]) -> dict[str, int]:
     """Given a list of strings, should return a dictionary where each key is a unique value from the list and each value is the number of times that key appeared in the input list."""
+    item_counter: dict[str, int] = {}
+    for item in item_list:
+        if item_list[item] in item_counter:
+            item_counter[f"{item_list[item]}"] += 1
+        else:
+            item_counter[f"{item_list[item]}"] = 1
+    return item_counter
