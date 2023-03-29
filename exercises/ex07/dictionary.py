@@ -17,9 +17,10 @@ def favorite_color(color_inputs: dict[str, str]) -> str:
     color_counter: dict[str, int] = {}
     for person in color_inputs:
         if color_inputs[person] in color_counter:
-            color_counter[f"{color_inputs[person]}"] += 1
+            color_counter[color_inputs[person]] += 1
         else:
-            color_counter[f"{color_inputs[person]}"] = 1
+            color_counter[color_inputs[person]] = 1
+    
 
     return color_result
 
