@@ -3,12 +3,12 @@
 __author__ = "730411646"
 
 
-def invert(xs: dict[str, str]) -> dict[str, str]:
+def invert(original_dict: dict[str, str]) -> dict[str, str]:
     """Given a dictionary input, should return a dictionary that inverts the keys and values."""
-    ys: dict[str, str] = {}
-    for x in xs:
-        ys[xs[x]] = x
-    return ys
+    inverse_dict: dict[str, str] = {}
+    for item in original_dict:
+        inverse_dict[original_dict[item]] = item
+    return inverse_dict
 
 
 def favorite_color(color_inputs: dict[str, str]) -> str:
