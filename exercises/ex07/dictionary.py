@@ -35,6 +35,7 @@ def favorite_color(color_inputs: dict[str, str]) -> str:
     color_result = separated_color[0]
     return color_result
 
+
 def count(item_list: list[str]) -> dict[str, int]:
     """Given a list of strings, should return a dictionary where each key is a unique value from the list and each value is the number of times that key appeared in the input list."""
     item_counter: dict[str, int] = {}
