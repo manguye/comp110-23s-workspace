@@ -6,6 +6,7 @@ __author__ = "730411646"
 from dictionary import invert, favorite_color, count
 import pytest
 
+
 def test_single_pair_invert() -> None:
     """Tests invert if input is a single pair dictionary."""
     test_dict: dict[str, str] = {"apple": "cat"}
@@ -39,7 +40,7 @@ def test_two_colors_favorite_color() -> None:
 
 def test_equal_colors_favorite_color() -> None:
     """Tests favorite_color if input is a dictionary with equal number of different values."""
-    test_dict: dict[str ,str] = {"Adam": "green", "Bart": "green", "Charles": "blue", "David": "blue"}
+    test_dict: dict[str, str] = {"Adam": "green", "Bart": "green", "Charles": "blue", "David": "blue"}
     assert favorite_color(test_dict) == "green"
 
 
