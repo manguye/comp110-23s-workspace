@@ -35,12 +35,20 @@ def test_equal_colors_favorite_color() -> None:
     test_dict: dict[str ,str] = {"Adam": "green", "Bart": "green", "Charles": "blue", "David": "blue"}
     assert favorite_color(test_dict) == "green"
 
+
 def test_empty_count() -> None:
     """Tests count if input is an empty list."""
     test_list: list[str] = []
     assert count(test_list) == {}
 
+
 def test_equal_count() -> None:
     """Tests count if input contains an equal number of unique objects in sequential order."""
     test_list: list[str] = ["apple", "apple", "apple", "banana", "banana", "banana", "cantaloupe", "cantaloupe", "cantaloupe"]
     assert count(test_list) == {"apple": 3, "banana": 3, "cantaloupe": 3}
+
+
+def test_unequal_count() -> None:
+    """Tests count if input contains an unequal number of unique objects in random order."""
+    test_list: list[str] = ["cantaloupe", "apple", "banana", "apple", "cantaloupe", "apple"]
+    assert count(test_list) == {"cantaloupe": 2, "apple": 3, "banana": 1}
