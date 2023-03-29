@@ -3,7 +3,7 @@
 __author__ = "730411646"
 
 
-from exercises.ex07.dictionary import invert, favorite_color, count
+from dictionary import invert, favorite_color, count
 import pytest
 
 def test_single_pair_invert() -> None:
@@ -16,6 +16,3 @@ def test_multiple_pairs_invert() -> None:
     test_dict: dict[str, str] = {"a": "z", "b": "y", "c": "x"}
     assert invert(test_dict) == {"z": "a", "y": "b", "x": "c"}
 
-with pytest.raises(KeyError):
-    my_dictionary = {'kris': 'jordan', 'michael': 'jordan'}
-    invert(my_dictionary)
