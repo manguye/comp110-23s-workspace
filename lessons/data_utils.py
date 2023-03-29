@@ -13,7 +13,7 @@ def read_csv_rows(filename:str) -> list[dict[str,str]]:
 def column_vals(table: list[dict[str,str]], header: str) -> list[str]:
     """Returns values in a table under a specific header."""
     result: list[str] = []
-    # tep through table
+    #step through table
     for row in table:
         # save every value under key "header"
         result.append(row[header])
