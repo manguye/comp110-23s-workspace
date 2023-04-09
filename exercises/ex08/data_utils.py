@@ -33,8 +33,12 @@ def head(table: dict[str, list[str]], number_of_rows: int) -> dict[str, list[str
     result: dict[str, list[str]] = {}
     for column in table:
         revolving_list: list[int] = []
-        for idx in range(0, number_of_rows):
-            revolving_list.append(table[column][idx])
+        if number_of_rows > len(table):
+            for idx in range(0, len(table)):
+                revolving_list.append(table[column][idx])
+        else:
+            for idx in range(0, number_of_rows):
+                revolving_list.append(table[column][idx])
         result[column] = revolving_list
     return result
 
