@@ -1,3 +1,7 @@
+"""EX08 - Data Wrangling"""
+
+__author__ = "730411646"
+
 from csv import DictReader
 
 def read_csv_rows(filename:str) -> list[dict[str, str]]:
