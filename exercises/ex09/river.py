@@ -8,6 +8,7 @@ from exercises.ex09.bear import Bear
 
 
 class River:
+    "Everything that you may possibly think of with a river, fish, and bears. This statement is not legally binding."
 
     day: int
     bears: list
@@ -25,7 +26,7 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
-        "Culling the old."
+        """Culling the old."""
         new_fish: list[Fish] = []
         for x in self.fish:
             if x.age <= 3:
@@ -39,7 +40,7 @@ class River:
         return None
 
     def bears_eating(self):
-        "Feeding the hungry."
+        """Feeding the hungry."""
         for x in self.bears:
             if len(self.fish) >= 5:
                 x.eat(3)
@@ -47,7 +48,7 @@ class River:
         return None
     
     def check_hunger(self):
-        "Culling those too hungry."
+        """Culling those too hungry."""
         nonstarving: list[Bear] = []
         for x in self.bears:
             if x.age >= 0:
@@ -56,14 +57,14 @@ class River:
         return None
         
     def remove_fish(self, amount: int):
-        "Removing the food."
+        """Removing the food."""
         while amount > 0:
             self.fish.pop(0)
             amount -= 1
         return None
 
     def repopulate_fish(self):
-        "Getting new fish."
+        """Getting new fish."""
         birth_rate: int = (len(self.fish) // 2) * 4
         while birth_rate > 0:
             self.fish.append(Fish())
@@ -71,7 +72,7 @@ class River:
         return None
     
     def repopulate_bears(self):
-        "Getting new bears."
+        """Getting new bears."""
         birth_rate: int = len(self.bears) // 2
         while birth_rate > 0:
             self.bears.append(Bear())
@@ -79,7 +80,7 @@ class River:
         return None
     
     def view_river(self):
-        "Checking progress."
+        """Checking progress."""
         print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
@@ -109,7 +110,7 @@ class River:
         self.view_river()
 
     def one_river_week(self):
-        "Simulate one week of life in the river."
+        """Simulate one week of life in the river."""
         self.one_river_day
         self.one_river_day
         self.one_river_day
