@@ -51,7 +51,7 @@ class River:
         """Culling those too hungry."""
         nonstarving: list[Bear] = []
         for x in self.bears:
-            if x.age >= 0:
+            if x.hunger_score >= 0:
                 nonstarving.append[x]
         self.bears = nonstarving
         return None
