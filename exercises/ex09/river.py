@@ -113,6 +113,6 @@ class River:
         """Simulate one week of life in the river."""
         day_counter: int = 7
         while day_counter > 0:
-            self.one_river_day
+            self.one_river_day()
             day_counter -= 1
         return None
