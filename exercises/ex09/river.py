@@ -108,5 +108,4 @@ class River:
         self.one_river_day
         self.one_river_day
         self.one_river_day
-        self.one_river_day
         return None
