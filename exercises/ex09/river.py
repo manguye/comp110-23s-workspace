@@ -1,4 +1,4 @@
-"""File to define River class"""
+"""File to define River class."""
 
 __author__ = "730411646"
 
@@ -6,14 +6,15 @@ __author__ = "730411646"
 from exercises.ex09.fish import Fish
 from exercises.ex09.bear import Bear
 
+
 class River:
 
     day: int
     bears: list
     fish: list
     
-    def __init__(self, num_fish: int, num_bears:int):
-        """New River with num_fish Fish and num_bears Bears"""
+    def __init__(self, num_fish: int, num_bears: int):
+        """New River with num_fish Fish and num_bears Bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
@@ -24,6 +25,7 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
+        "Culling the old."
         new_fish: list[Fish] = []
         for x in self.fish:
             if x.age <= 3:
@@ -37,6 +39,7 @@ class River:
         return None
 
     def bears_eating(self):
+        "Feeding the hungry."
         for x in self.bears:
             if len(self.fish) >= 5:
                 x.eat(3)
@@ -44,6 +47,7 @@ class River:
         return None
     
     def check_hunger(self):
+        "Culling those too hungry."
         nonstarving: list[Bear] = []
         for x in self.bears:
             if x.age >= 0:
@@ -52,33 +56,37 @@ class River:
         return None
         
     def remove_fish(self, amount: int):
+        "Removing the food."
         while amount > 0:
             self.fish.pop(0)
             amount -= 1
         return None
 
     def repopulate_fish(self):
-        birth_rate: int = (len(self.fish)//2) * 4
+        "Getting new fish."
+        birth_rate: int = (len(self.fish) // 2) * 4
         while birth_rate > 0:
             self.fish.append(Fish())
             birth_rate -= 1
         return None
     
     def repopulate_bears(self):
-        birth_rate: int = len(self.bears)//2
+        "Getting new bears."
+        birth_rate: int = len(self.bears) // 2
         while birth_rate > 0:
             self.bears.append(Bear())
             birth_rate -= 1
         return None
     
     def view_river(self):
+        "Checking progress."
         print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
         return None
             
     def one_river_day(self):
-        """Simulate one day of life in the river"""
+        """Simulate one day of life in the river."""
         # Increase day by 1
         self.day += 1
         # Simulate one day for all Bears
@@ -101,6 +109,7 @@ class River:
         self.view_river()
 
     def one_river_week(self):
+        "Simulate one week of life in the river."
         self.one_river_day
         self.one_river_day
         self.one_river_day
