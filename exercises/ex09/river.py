@@ -49,11 +49,11 @@ class River:
     
     def check_hunger(self):
         """Culling those too hungry."""
-        nonstarving: list[Bear] = []
+        nonstarving_bears: list[Bear] = []
         for x in self.bears:
             if x.hunger_score >= 0:
-                nonstarving.append[x]
-        self.bears = nonstarving
+                nonstarving_bears.append(x)
+        self.bears = nonstarving_bears
         return None
         
     def remove_fish(self, amount: int):
@@ -111,11 +111,8 @@ class River:
 
     def one_river_week(self):
         """Simulate one week of life in the river."""
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
-        self.one_river_day
+        day_counter: int = 7
+        while day_counter > 0:
+            self.one_river_day
+            day_counter -= 1
         return None
