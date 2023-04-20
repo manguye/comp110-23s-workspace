@@ -8,7 +8,7 @@ from exercises.ex09.bear import Bear
 
 
 class River:
-    "Everything that you may possibly think of with a river, fish, and bears. This statement is not legally binding."
+    """Everything that you may possibly think of with a river, fish, and bears. This statement is not legally binding."""
 
     day: int
     bears: list
