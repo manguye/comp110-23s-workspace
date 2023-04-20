@@ -55,9 +55,17 @@ class River:
         return None
 
     def repopulate_fish(self):
+        birth_rate: int = (len(self.fish)//2) * 4
+        while birth_rate > 0:
+            self.fish.append(Fish())
+            birth_rate -= 1
         return None
     
     def repopulate_bears(self):
+        birth_rate: int = len(self.bears)//2
+        while birth_rate > 0:
+            self.bears.append(Bear())
+            birth_rate -= 1
         return None
     
     def view_river(self):
