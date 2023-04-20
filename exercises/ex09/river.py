@@ -1,5 +1,8 @@
 """File to define River class"""
 
+__author__ = "730411646"
+
+
 from exercises.ex09.fish import Fish
 from exercises.ex09.bear import Bear
 
