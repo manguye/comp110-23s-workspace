@@ -41,6 +41,11 @@ class River:
         return None
     
     def check_hunger(self):
+        nonstarving: list[Bear] = []
+        for x in self.bears:
+            if x.age >= 0:
+                nonstarving.append[x]
+            self.bears = nonstarving
         return None
         
     def remove_fish(self, amount: int):
