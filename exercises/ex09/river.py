@@ -48,7 +48,7 @@ class River:
         for x in self.bears:
             if x.age >= 0:
                 nonstarving.append[x]
-            self.bears = nonstarving
+        self.bears = nonstarving
         return None
         
     def remove_fish(self, amount: int):
