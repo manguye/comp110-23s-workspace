@@ -53,7 +53,7 @@ class River:
         
     def remove_fish(self, amount: int):
         while amount > 0:
-            self.fish.pop[0]
+            self.fish.pop(0)
             amount -= 1
         return None
 
