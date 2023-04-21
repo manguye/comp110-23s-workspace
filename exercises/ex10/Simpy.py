@@ -9,6 +9,7 @@ __author__ = "730411646"
 
 class Simpy:
     """Everything you might every want or need for Simpy."""
+    
     values: list[float]
 
     def __init__(self, number_list: list[float]):
