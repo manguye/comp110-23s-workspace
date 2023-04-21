@@ -8,6 +8,7 @@ __author__ = "730411646"
 
 
 class Simpy:
+    """Everything you might every want or need for Simpy."""
     values: list[float]
 
     def __init__(self, number_list: list[float]):
@@ -42,7 +43,7 @@ class Simpy:
     def __add__(self, rhs: Union[float, Simpy]) -> Simpy:
         """Overrides add to allow addition between Simpy objects and/or floats."""
         new_simpy: Simpy = Simpy([])
-        if isinstance(rhs, float): # ask if this is allowed because I'm not sure if it is
+        if isinstance(rhs, float):
             for x in range(0, len(self.values)):
                 new_simpy.values.append(self.values[x] + rhs)
         else:  
